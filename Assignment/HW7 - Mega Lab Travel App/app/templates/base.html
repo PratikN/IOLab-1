@@ -1,0 +1,33 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - MakeOurTrip</title>
+    {% else %}
+    <title>Welcome to your trips</title>
+    {% endif %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <!-- <link rel="stylesheet" href="_css/style.css"> -->  </head>
+  <body>
+    <header>
+      {% block header %}
+        <nav class="#f44336 red">
+            <div class="navbar-wrapper container">
+              <a href="/display_trips" class="brand-logo"><i class="material-icons">card_travel</i>MakeOurTrip</a>
+
+              <form action="logout" id="logout">
+                <input class="right action-button btn-flat white" id="logout-button" type="submit" value="Logout">
+              </form>
+            </div>
+        </nav>
+
+      {% endblock %}
+		</header>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <script type="text/javascript" src="{{url_for('static', filename='main.js')}}"> </script>
+  </body>
+</html>

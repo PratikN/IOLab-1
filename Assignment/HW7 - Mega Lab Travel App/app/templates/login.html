@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+  {% block header %}
+  <nav class="#f44336 red">
+      <div class="navbar-wrapper container">
+        <a href="/index" class="brand-logo"><i class="material-icons">card_travel</i>MakeOurTrip</a>
+      </div>
+  </nav>
+  {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class= "section">
+      <!-- <a href="{{ url_for('login') }}">Home</a> -->
+    </div>
+    <h3>Login</h3>
+    <form action="login" method='post'>
+      <label for="username">username</label><input type="text" name="username" value="">
+      <label for="password">password</label><input type="password" name="password" value="">
+      <input class="waves-effect waves-light btn #f44336 red" id="login" type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+{% endblock %}

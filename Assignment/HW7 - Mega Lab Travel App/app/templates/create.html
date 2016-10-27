@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <h2>Create a Trip</h2>
+    <form action="" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <div class="divider"></div>
+      <div class="section">
+        <!--add input fields-->
+        <p>
+          Name of trip: <br>
+          {{form.name(size=120)}} <br>
+        </p>
+        <p>
+          Destination: <br>
+          {{form.destination(size=120)}} <br>
+        </p>
+        <p>
+          Add Friend: <br>
+          {{form.friend}} <br>
+        </p>
+      </div>
+      <p><input class="center-align waves-effect waves-light btn #f44336 red" type="submit" value="Create Trip"></p>
+    </form>
+  </div>
+</div>
+{% endblock %}
